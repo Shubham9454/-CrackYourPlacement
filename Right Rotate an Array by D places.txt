@@ -1,0 +1,15 @@
+void rotate_array(vector<int>& nums, int low, int high){
+        while(low <= high){
+            swap(nums[low] , nums[high]);
+            low++;
+            high--;
+        }
+    }
+    void rotate(vector<int>& nums, int k) {
+        int n = nums.size();
+        k = k % n;
+        rotate_array(nums, 0, n-k-1);
+        rotate_array(nums, n-k, n-1);
+        rotate_array(nums, 0, n-1);
+        
+    }
