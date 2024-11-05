@@ -1,0 +1,10 @@
+bool searchInSorted(vector<int> arr, int k) {
+
+        // Your code here
+        int n = arr.size();
+        
+        for(int i = 0; i < n; i++){
+            if(k == arr[i]) return 1;
+        }
+        return 0;
+    }
